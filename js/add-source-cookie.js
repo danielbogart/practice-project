@@ -1,3 +1,5 @@
+'use strict';
+
 (function(){
 
     $(document).ready(function() {
@@ -16,7 +18,7 @@
           } else if(url.indexOf('?source=Twitter') !== -1) {
             document.cookie='source=Twitter';
           } else {
-            document.cookie='source=No Source Specified';
+            document.cookie='source=No source specified';
           }
       }
 

@@ -1,3 +1,5 @@
+'use strict';
+
 (function(){
 
     $(document).ready(function() {
@@ -16,12 +18,15 @@
 
             // build html for each free sample option
             $.each(response.data, function(index, value) {
-                itemOutput += '<div class="col-md-3">'
-                              + '<a href="/signup.html" class="item-link" id="product-' + value.id + '">'
-                                + '<img class="img-responsive" src="' + value.images["0"] + '"/>'
-                                + '<h4 class="title">' + value.title + '</h4>'
+                itemOutput += '<div class="col-md-3 item-wrapper">'
+                              + '<div class="item-container">'
+                                + '<img class="img-responsive product-image" src="' + value.images["0"] + '"/>'
+                                + '<h4 class="title center-text">' + value.title + '</h4>'
                                 + '<div class="description">' + value.description + '</div>'
-                              + '</a>'
+                                + '<a href="/signup.html" class="item-link" id="product-' + value.id + '">'
+                                  + '<button class="btn btn-md btn-danger">Claim This Freebie</button>'
+                                + '</a>'
+                              + '</div>'
                             + '</div>';
             });
 
@@ -36,7 +41,7 @@
           $.each(responseData.data, function(index, value) {
             if (value.id === product_id) {
               document.cookie='product_image=' + value.images['0'];
-              document.cookie='product_title=' + value.title;
+              document.cookie='product_title=' + value.meta_title;
             }
           });
         }

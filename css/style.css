@@ -1,0 +1,43 @@
+body {
+  background-image: url("../images/bright-bg.png");
+}
+
+.validation-error {
+  border: 2px solid red;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.product-image {
+  margin: 0 auto;
+  border-radius: 5px
+}
+
+.item-wrapper, .form-wrapper, .user-info-wrapper {
+  padding: 20px;
+}
+
+.item-container, .form-container, .user-info-container {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #CCCCCC;
+  -moz-box-shadow: 0px 0px 2px #CCCCCC;
+  -webkit-box-shadow: 0px 0px 8px #665252
+}
+
+.title-container {
+  margin: 0 auto;
+}
+
+.headline {
+  text-align: center;
+  color: #912c5f;
+  font-style: italic;
+}
+
+h4 {
+  color: #912c5f
+}

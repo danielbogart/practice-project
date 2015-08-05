@@ -5,36 +5,75 @@
   <title></title>
 
   <!-- styles -->
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div id="signup">
-    <div id="selected-product"></div>
+  <div class="container">
+    <div class="row">
+      <div id="signup">
+        <div id="selected-product"></div>
 
-    <h1>Most samples are available for a limited time only!</h1>
-    <h2>Sign up to redeem while supplies last</h2>
+          <div clas="title-container">
+            <h1 class="headline">Most samples are available for a limited time only!</h1>
+            <h2 class="headline">Sign up to redeem while supplies last</h2>
+          </div>
 
-    <form id="signupForm">
-      <input type="text" placeholder="First Name" name="firstName"/>
-      <input type="text" placeholder="Last Name" name="lastName"/>
-      <input type="text" placeholder="Email" name="email"/>
-      <input type="text" placeholder="Phone Number" name="phone"/>
-      <input type="text" placeholder="Street Address" name="street"/>
-      <input type="text" placeholder="City" name="city"/>
-      <input type="text" placeholder="State" name="state"/>
-      <input type="text" placeholder="Zip" name="zip"/>
+          <div class="col-md-8 col-md-offset-2 form-wrapper">
+            <div class="form-container">
+              <form name="signupForm" id="signupForm">
 
-      <!-- hidden fields -->
-      <input type="text" hidden="true" name="applicant"/>
-      <input type="text" hidden="true" name="cookie"/>
+                <div class="form-group">
+                  <label for="firstName">First name</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName"/>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last name</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="Last Name" id="lastName" name="lastName"/>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="Email" id="email" name="email"/>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone number</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone"/>
+                </div>
+                <div class="form-group">
+                  <label for="street">Street address</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="Street Address" id="street" name="street"/>
+                </div>
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="City" id="city" name="city"/>
+                </div>
+                <div class="form-group">
+                  <label for="state">State</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="State" id="state" name="state"/>
+                </div>
+                <div class="form-group">
+                  <label for="zip">Zip Code</label>
+                  <input maxlength="100" type="text" class="form-control" placeholder="Zip" id="zip" name="zip"/>
+                </div>
 
-      <button class="" type="submit">submit</button>
-    </form>
+                <!-- hidden fields -->
+                <input type="text" hidden="true" name="applicant" value="DB"/>
+                <input type="text" hidden="true" name="cookie" value="default"/>
+
+                <button class="btn btn-md btn-primary form-control" type="submit">submit</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
+
   <!-- scripts -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="js/submit-form.js"></script>
 </body>
 </html>

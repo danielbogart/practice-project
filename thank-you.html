@@ -5,18 +5,67 @@
   <title></title>
 
   <!-- styles -->
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div id="thank-you">
-    <h1><span class="name">X</span>, your free sample is on its way!</h1>
-    <h2>We hope you enjoy your freebie, and share it with your <span class="source"></span>friends</h2>
+  <div class="container">
+    <div class="row">
+      <div id="thank-you">
 
-    <div id="user-information"></div>
+        <div clas="title-container">
+          <h1 class="headline"><span class="name"></span>, your free sample is on its way!</h1>
+          <h2 class="headline">We hope you enjoy your freebie, and share it with your <span class="source"></span>friends</h2>
+        </div>
+
+        <div id="user-information">
+          <div class="col-md-6 user-info-wrapper">
+            <div class="user-info-container">
+              <h4>Review your user information</h4>
+               <hr>
+              <div>
+                <label>Name:</label>
+                <span id="full-name"></span>
+              </div>
+              <div>
+                <label>Phone Number:</label>
+                <span id="phone"></span>
+              </div>
+              <div>
+                <label>Email address:</label>
+                <span id="email"></span>
+              </div>
+              <div>
+                <label>Street address:</label>
+                <span id="street"></span>
+              </div>
+              <div>
+                <label>City:</label>
+                <span id="city"></span>
+              </div>
+              <div>
+                <label>State:</label>
+                <span id="state"></span>
+              </div>
+              <div>
+                <label>Zip code:</label>
+                <span id="zip"></span>
+              </div>
+              <div>
+              <hr>
+                <p>Contact us at <a href="mailto:support@freebies.com">support@freebies.com</a> if incorrect</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
   <!-- scripts -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="js/submit-form.js"></script>
 </body>
 </html>
