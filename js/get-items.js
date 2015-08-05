@@ -5,7 +5,7 @@
         // declare vars to be used
         var itemOutput = '';
         var responseData;
-        var freeItemData = "http://www.getitfree.us/api/posts.json?filter=popular&limit=8";
+        var freeItemData = 'http://www.getitfree.us/api/posts.json?filter=popular&limit=8';
 
         $.getJSON( freeItemData, {
             format: "json"
@@ -35,8 +35,8 @@
 
           $.each(responseData.data, function(index, value) {
             if (value.id === product_id) {
-              document.cookie="product_image=" + value.images["0"];
-              document.cookie="product_title=" + value.title;
+              document.cookie='product_image=' + value.images['0'];
+              document.cookie='product_title=' + value.title;
             }
           });
         }
