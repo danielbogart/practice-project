@@ -48,3 +48,12 @@ h4 {
 .signup-title, .signup-button {
   padding: 0px 15px;
 }
+
+.logo {
+  max-height: 45px;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
