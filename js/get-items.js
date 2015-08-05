@@ -9,6 +9,7 @@
         var responseData;
         var freeItemData = 'http://www.getitfree.us/api/posts.json?filter=popular&limit=8';
 
+        // jquery to get json from endpoint
         $.getJSON( freeItemData, {
             format: "json"
         }).done(function(response) {
@@ -18,16 +19,16 @@
 
             // build html for each free sample option
             $.each(response.data, function(index, value) {
-                itemOutput += '<div class="col-md-3 item-wrapper">'
-                              + '<div class="item-container">'
-                                + '<img class="img-responsive product-image" src="' + value.images["0"] + '"/>'
-                                + '<h4 class="title center-text">' + value.title + '</h4>'
-                                + '<div class="description">' + value.description + '</div>'
-                                + '<a href="/signup.html" class="item-link" id="product-' + value.id + '">'
-                                  + '<button class="btn btn-md btn-danger">Claim This Freebie</button>'
-                                + '</a>'
-                              + '</div>'
-                            + '</div>';
+                itemOutput += '<div class="col-md-3 item-wrapper">' +
+                              '<div class="item-container">' +
+                                '<img class="img-responsive product-image" src="' + value.images["0"] + '"/>' +
+                                '<h4 class="title center-text">' + value.title + '</h4>' +
+                                '<div class="description">' + value.description + '</div>' +
+                                '<a href="/signup.html" class="item-link" id="product-' + value.id + '">' +
+                                  '<button class="btn btn-md btn-danger">Claim This Freebie</button>' +
+                                '</a>' +
+                              '</div>' +
+                            '</div>';
             });
 
             // append to gif-results div
@@ -35,6 +36,7 @@
 
         });
 
+        // set cookies for product image and title
         function setProductCookies(id){
           var product_id = id.slice(8);
 
@@ -46,6 +48,7 @@
           });
         }
 
+        // click handler triggered when freebie is claimed
         $('#landing-page').on('click', '.item-link', function(){
           setProductCookies(this.id);
         });

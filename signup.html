@@ -2,12 +2,15 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title></title>
+  <title>Sign up to receive your sample</title>
 
   <!-- styles -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 <body>
   <div class="container">
@@ -15,58 +18,65 @@
       <div id="signup">
         <div id="selected-product"></div>
 
-          <div clas="title-container">
-            <h1 class="headline">Most samples are available for a limited time only!</h1>
-            <h2 class="headline">Sign up to redeem while supplies last</h2>
-          </div>
-
-          <div class="col-md-8 col-md-offset-2 form-wrapper">
-            <div class="form-container">
-              <form name="signupForm" id="signupForm">
-
-                <div class="form-group">
-                  <label for="firstName">First name</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName"/>
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last name</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="Last Name" id="lastName" name="lastName"/>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="Email" id="email" name="email"/>
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone number</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone"/>
-                </div>
-                <div class="form-group">
-                  <label for="street">Street address</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="Street Address" id="street" name="street"/>
-                </div>
-                <div class="form-group">
-                  <label for="city">City</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="City" id="city" name="city"/>
-                </div>
-                <div class="form-group">
-                  <label for="state">State</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="State" id="state" name="state"/>
-                </div>
-                <div class="form-group">
-                  <label for="zip">Zip Code</label>
-                  <input maxlength="100" type="text" class="form-control" placeholder="Zip" id="zip" name="zip"/>
-                </div>
-
-                <!-- hidden fields -->
-                <input type="text" hidden="true" name="applicant" value="DB"/>
-                <input type="text" hidden="true" name="cookie" value="default"/>
-
-                <button class="btn btn-md btn-primary form-control" type="submit">submit</button>
-              </form>
-            </div>
-          </div>
-
+        <div class="title-container">
+          <h1 class="headline">Most samples are available for a limited time only!</h1>
+          <h2 class="headline">Sign up to redeem while supplies last</h2>
         </div>
+
+        <div class="col-md-8 col-md-offset-2 form-wrapper">
+          <div class="form-container">
+            <form name="signupForm" id="signupForm">
+
+              <div class="signup-title">
+                <h4>Enter your information below</h4>
+                <hr>
+              </div>
+
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="firstName">First name</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="lastName">Last name</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="Last Name" id="lastName" name="lastName"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="email">Email address</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="Email" id="email" name="email"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="phone">Phone number</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="street">Street address</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="Street Address" id="street" name="street"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="city">City</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="City" id="city" name="city"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="state">State</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="State" id="state" name="state"/>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="zip">Zip Code</label>
+                <input maxlength="100" type="text" class="form-control" placeholder="Zip" id="zip" name="zip"/>
+              </div>
+
+              <!-- hidden fields -->
+              <input type="text" class="hidden-input" name="applicant" value="DB"/>
+              <input type="text" class="hidden-input" name="cookie" value="default"/>
+
+              <div class="signup-button">
+                <button class="btn btn-md btn-primary form-control" type="submit">submit</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

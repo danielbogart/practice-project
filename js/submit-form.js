@@ -12,7 +12,7 @@
 
       // function to sanitize form inputs before submission
       function sanitizeString(str){
-        str = str.replace(/[^a-z0-9áéíóúñü@ \.,_-]/gim,"");
+        str = str.replace(/[^a-z0-9áéíóúñü@# \.,_-]/gim,"");
         return str.trim();
       }
 
@@ -20,7 +20,7 @@
       function getCookie(name) {
         var value = '; ' + document.cookie;
         var parts = value.split('; ' + name + '=');
-        if (parts.length == 2) return parts.pop().split(';').shift();
+        if (parts.length == 2) { return parts.pop().split(';').shift(); }
       }
 
       // attach a submit handler to the form
@@ -40,18 +40,22 @@
           element.value = sanitizeString(element.value);
 
           if (!element.value) {
+
+            // add error class to invalid or empty inputs
             $('#'+element.name).addClass('validation-error');
           } else {
 
+            // remove errors for valid inputs
             $('#'+element.name).removeClass('validation-error');
 
-            //attach user info to session storage for use in thank you page
+            // attach user info to session storage for use in thank you page
             sessionStorage.setItem(element.name, element.value);
 
+            // concatenate cookies, attach to cookie hidden field
             if (element.name === 'cookie') {
-              element.value = 'image: ' + product_image
-                            + ', title: ' + product_title
-                            + ', source: ' + source;
+              element.value = 'image: ' + product_image +
+                            ', title: ' + product_title +
+                            ', source: ' + source;
             }
           }
 
@@ -66,15 +70,18 @@
         }).fail(function(xhr, textStatus, errorThrown) {
           alert("Error submitting signup. Please enter missing fields and only use letters, numbers, and email formatting");
         });
+
       });
 
       // build freebie template
-      freebieTemplate = '<div class="col-md-6 item-wrapper">'
-                          + '<div class="item-container">'
-                            + '<img class="img-responsive product-image" src="' + product_image + '"/>'
-                            + '<h4 class="title center-text">' + product_title + '</h4>'
-                          + '</div>'
-                        + '</div>';
+      freebieTemplate = '<div class="col-md-6 item-wrapper">' +
+                          '<div class="item-container">' +
+                            '<h4>You picked</h4>' +
+                            '<hr>' +
+                            '<img class="img-responsive product-image" src="' + product_image + '"/>' +
+                            '<h4 class="title center-text">' + product_title + '</h4>' +
+                          '</div>' +
+                        '</div>';
 
       // show freebie
       $('#user-information').append(freebieTemplate);

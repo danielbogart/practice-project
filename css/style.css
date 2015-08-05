@@ -35,9 +35,16 @@ body {
 .headline {
   text-align: center;
   color: #912c5f;
-  font-style: italic;
 }
 
 h4 {
   color: #912c5f
+}
+
+.hidden-input {
+  display: none;
+}
+
+.signup-title, .signup-button {
+  padding: 0px 15px;
 }
